@@ -16,7 +16,7 @@
 <meta property="og:description" content="1Elliptic Curve y^2&#x3D;x^3+{\rm a}x+{\rm b}in which 4{\rm a}^{3}+27{\rm b}^{2}\neq 0">
 <meta property="og:locale" content="undefined">
 <meta property="article:published_time" content="2019-12-17T05:24:51.000Z">
-<meta property="article:modified_time" content="2019-12-18T09:06:29.492Z">
+<meta property="article:modified_time" content="2019-12-18T09:15:25.868Z">
 <meta property="article:author" content="SpongeDog">
 <meta property="article:tag" content="Algorithm">
 <meta property="article:tag" content="Math">
@@ -204,9 +204,12 @@
 <p>Given two adjacent straight line segments of arc <script type="math/tex">\ell _{1}</script> which are determined by <script type="math/tex">(6)</script> as follow</p>
 <script type="math/tex; mode=display">x = x_{1}, \quad \quad s_{1} \leq y \leq e_{1}</script><script type="math/tex; mode=display">x = x_{2} = x_{1} + 1, \quad \quad s_{2} \leq y \leq e_{2}</script><p>so, if we can verify <script type="math/tex">\mid s_{2}-e_{1} \mid \leq 1</script>, then the above assertions are correct. </p>
 <p>Let</p>
-<script type="math/tex; mode=display">x(k)=x_{0}-r_{0} + k $$, $$ k=0,1,\cdots , [\frac{r_{0}}{\sqrt{2}}+0.5] $$,
-$$ \triangle \ell (k)= s(x_{0}-r_{0}+k)-e(x_{0}-r_{0}+k-1), k=1,\cdots , [\frac{r_{0}}{\sqrt{2}}+0.5] \quad \quad \quad \quad (12)</script><p>According to formula <script type="math/tex">(8)-(10)</script>, it gets</p>
-<script type="math/tex; mode=display">\triangle \ell (k)=\frac{-2k+1}{\sqrt{f(k)}+\sqrt{f(k)+2k-1}}</script><p>then we have</p>
+<script type="math/tex; mode=display">x(k)=x_{0}-r_{0} + k</script><p>where</p>
+<script type="math/tex; mode=display">k=0,1,\cdots , [\frac{r_{0}}{\sqrt{2}}+0.5] $$,
+$$ \triangle \ell (k)= s(x_{0}-r_{0}+k)-e(x_{0}-r_{0}+k-1) \quad \quad \quad \quad (12)</script><p>where</p>
+<script type="math/tex; mode=display">k=1,\cdots , [\frac{r_{0}}{\sqrt{2}}+0.5] $$.
+According to formula $$ (8)-(10) $$, it gets
+$$ \triangle \ell (k)=\frac{-2k+1}{\sqrt{f(k)}+\sqrt{f(k)+2k-1}}</script><p>then we have</p>
 <script type="math/tex; mode=display">\mid \triangle \ell (k) \mid \leq \frac{2k-1}{2\sqrt{f(k)}} \quad \quad \quad \quad (13)</script><p>where</p>
 <script type="math/tex; mode=display">f(k)=-2k_{2}+2r_{0}k-r){0} \quad \quad \quad \quad (14) $$.
 Notice that
