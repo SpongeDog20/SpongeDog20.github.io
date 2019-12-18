@@ -16,7 +16,7 @@
 <meta property="og:description" content="1Elliptic Curve y^2&#x3D;x^3+{\rm a}x+{\rm b}in which 4{\rm a}^{3}+27{\rm b}^{2}\neq 0">
 <meta property="og:locale" content="undefined">
 <meta property="article:published_time" content="2019-12-17T05:24:51.000Z">
-<meta property="article:modified_time" content="2019-12-18T07:22:41.459Z">
+<meta property="article:modified_time" content="2019-12-18T09:00:45.502Z">
 <meta property="article:author" content="SpongeDog">
 <meta property="article:tag" content="Algorithm">
 <meta property="article:tag" content="Math">
@@ -202,10 +202,16 @@
 <p>Assertion 2:<br>Arc <script type="math/tex">\widehat{A_{1}A_{2}}</script> and arc <script type="math/tex">\widehat{A_{0}A_{3}}</script> consist of horizontal straight line segments.</p>
 <p>By the symmetrical of the circle, we just need to consider arc <script type="math/tex">\widehat{A_{0}A_{1}}</script>. And if we can proof that <script type="math/tex">\ell _{1}</script> consists of vertical straight line segments, then the above assertions are correct.</p>
 <p>Given two adjacent straight line segments of arc <script type="math/tex">\ell _{1}</script> which are determined by <script type="math/tex">(6)</script> as follow</p>
-<script type="math/tex; mode=display">x = x_{1}, \quad \quad s_{1} \leq y \leq e_{1}</script><script type="math/tex; mode=display">x = x_{2} = x_{1} + 1, \quad \quad s_{2} \leq y \leq e_{2}</script><p>so, if we can verify <script type="math/tex">\mid s_{2}-e_{1} \mid \leq 1</script>, then the above assertions are correct.<br>Let</p>
-<script type="math/tex; mode=display">\triangle \ell = \sqrt{r_{0}^{2}-(x+1-x_{0})^{2}-r_{0}}-\sqrt{r_{0}^{2}-(x-x_{0})^{2}+r_{0}} \quad \quad \quad \quad (12)</script><script type="math/tex; mode=display">x_{0}-r_{0}+1 \leq x \leq x_{0}- \frac {r_{0}}{\sqrt{2}}</script><p>then we have</p>
-<script type="math/tex; mode=display">\sqrt{r_{0}-1} \leq s(x) \leq \frac {r_{0}-1}{\sqrt{2}} \quad \quad \quad \quad (13)</script><script type="math/tex; mode=display">\sqrt{3r_{0}-1} \leq e(x) \leq \frac {r_{0}+1}{\sqrt{2}} \quad \quad \quad \quad (14)</script><script type="math/tex; mode=display">(\sqrt{2}-2)r_{0}-1 \leq 2(x_{0}-x)-2r_{0}-1 \leq 3 \quad \quad \quad \quad (15)</script><p>combine <script type="math/tex">(13)-(15)</script>, we obtain</p>
-<script type="math/tex; mode=display">\frac{(\sqrt{2}-2)r_{0}-1}{\sqrt{2}r_{0}} \leq \triangle \ell \leq \frac{-3}{\sqrt{r_{0}-1}+\sqrt{3r_{0}-1}}</script><p>when <script type="math/tex">r_{0} \geq 2</script>, it gets</p>
+<script type="math/tex; mode=display">x = x_{1}, \quad \quad s_{1} \leq y \leq e_{1}</script><script type="math/tex; mode=display">x = x_{2} = x_{1} + 1, \quad \quad s_{2} \leq y \leq e_{2}</script><p>so, if we can verify <script type="math/tex">\mid s_{2}-e_{1} \mid \leq 1</script>, then the above assertions are correct. </p>
+<p>Let</p>
+<script type="math/tex; mode=display">x(k)=x_{0}-r_{0} + k $$, $$ k=0,1,\cdots , [\frac{r_{0}}{\sqrt{2}}+0.5] $$,
+$$ \triangle \ell (k)= s(x_{0}-r_{0}+k)-e(x_{0}-r_{0}+k-1), k=1,\cdots , [\frac{r_{0}}{\sqrt{2}}+0.5] - 1 \quad \quad \quad \quad (12)</script><p>According to formula <script type="math/tex">(8)-(10)</script>, it gets</p>
+<script type="math/tex; mode=display">\triangle \ell (k)=\frac{-2k+1}{\sqrt{f(k)}+\sqrt{f(k)+2k-1}}</script><p>then we have</p>
+<script type="math/tex; mode=display">\mid \triangle \ell (k) \mid \leq \frac{2k-1}{2\sqrt{f(k)}}</script><p>where</p>
+<script type="math/tex; mode=display">f(k)=-2k_{2}+2r_{0}k-r){0} $$.
+Notice that
+$$ 4f(k)-(2k-1)_{2}=4(-2k_{2}+2r_{0}k-r_{0})+4k-1</script><p>is monotonic increasing when $$ 1 \leq k \leq \frac{r_{0}}{\sqrt{2}}, then it obtains</p>
+<script type="math/tex; mode=display">4f(k)-(2k-1)_{2} \geq 4f(1)-(2 \times 1-1)_{2}=4r_{0}-5</script><p>when <script type="math/tex">r_{0} \geq 2</script>, it gets</p>
 <script type="math/tex; mode=display">\mid \triangle \ell \mid < 1.5</script><p>hence, <script type="math/tex">\mid s_{2}-e_{1} \mid \leq 1</script> for any <script type="math/tex">x \in \rm{set} \{ x_{0}-r_{0},x_{0}-r_{0}+1, \cdots, x_{0}-\sqrt {\frac {r_{0}^{2}}{2}} \}</script>.</p>
 <p>Let <script type="math/tex">C_{1}=(x_{0}-r_{0},y_{0})</script>, <script type="math/tex">C_{2}=(x_{0},y_{0}-r_{0})</script>,<script type="math/tex">C_{1}=(x_{0}+r_{0},y_{0})</script>,<script type="math/tex">C_{1}=(x_{0},y_{0}+r_{0})</script>, if <script type="math/tex">r_{0}=1</script>, then the circle is form by these four points.</p>
 <p>It is obvious that <script type="math/tex">\ell _{1}</script> and <script type="math/tex">\ell _{2}</script> is connect by terms of eight-neighbor, and <script type="math/tex">A_{0}, A_{1}, A_{2}, A_{3}</script> joint the four arcs together, so it can form a complete circle.</p>
