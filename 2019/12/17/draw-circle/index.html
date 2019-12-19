@@ -16,7 +16,7 @@
 <meta property="og:description" content="1Elliptic Curve y^2&#x3D;x^3+{\rm a}x+{\rm b}in which 4{\rm a}^{3}+27{\rm b}^{2}\neq 0">
 <meta property="og:locale" content="undefined">
 <meta property="article:published_time" content="2019-12-17T05:24:51.000Z">
-<meta property="article:modified_time" content="2019-12-19T03:08:05.506Z">
+<meta property="article:modified_time" content="2019-12-19T03:13:32.957Z">
 <meta property="article:author" content="SpongeDog">
 <meta property="article:tag" content="Algorithm">
 <meta property="article:tag" content="Math">
@@ -208,12 +208,10 @@
 <script type="math/tex; mode=display">x(k)=x_{0}-r_{0} + k, \quad k=0,1,\cdots , [\frac{r_{0}}{\sqrt{2}}+0.5]</script><p>Define the difference value as follow:</p>
 <script type="math/tex; mode=display">\triangle \ell (k)= s(x_{0}-r_{0}+k)-e(x_{0}-r_{0}+k-1), \quad k=1,\cdots , [\frac{r_{0}}{\sqrt{2}}+0.5] \quad \quad \quad \quad (12)</script><p>According to formula <script type="math/tex">(8)-(10)</script>, it gets</p>
 <script type="math/tex; mode=display">\triangle \ell (k)=\frac{-2k+1}{\sqrt{f(k)}+\sqrt{f(k)+2k-1}} \quad \quad \quad \quad (13)</script><p>where <script type="math/tex">f(k)=-2k^{2}+2r_{0}k-r_{0}</script>.<br>Then we have</p>
-<p><script type="math/tex">\mid {\triangle {\ell {(k)}}} \mid \leq \frac {2k-1}{2 \sqrt{f(k)}} \quad \quad \quad \quad (14)</script>.<br>Let</p>
-<p><script type="math/tex">F(x)=4f(k)-(2k-1)^{2}</script>,</p>
-<p><script type="math/tex">1 \leq k \leq \frac{r_{0}}{\sqrt{2}}</script>,<br>it is easy to show that <script type="math/tex">F(x)</script> is monotonic increasing.</p>
-<p>in which <script type="math/tex">F(0)=4r_{0}-5</script>, combine formula <script type="math/tex">(13)-(15)</script>, we obtain</p>
-<p><script type="math/tex">\mid \triangle \ell (k) \mid < 1</script>, If <script type="math/tex">r_{0} \geq 2</script>.</p>
-<p>Hence, <script type="math/tex">\mid s_{2}-e_{1} \mid \leq 1</script> for any <script type="math/tex">x \in \rm{set} \{ x_{0}-r_{0},x_{0}-r_{0}+1, \cdots, x_{0}-\sqrt {\frac {r_{0}^{2}}{2}} \}</script>.</p>
+<script type="math/tex; mode=display">\mid {\triangle {\ell {(k)}}} \mid \leq \frac {2k-1}{2 \sqrt{f(k)}} \quad \quad \quad \quad (14)</script><p>Let</p>
+<script type="math/tex; mode=display">F(x)=4f(k)-(2k-1)^{2} \quad \quad \quad \quad (15)</script><script type="math/tex; mode=display">1 \leq k \leq \frac{r_{0}}{\sqrt{2}}</script><p>it is easy to show that <script type="math/tex">F(x)</script> is monotonic increasing, then</p>
+<script type="math/tex; mode=display">F(x) \geq F(0) \quad \quad \quad \quad (16)</script><p>in which <script type="math/tex">F(0)=4r_{0}-5</script>, combine formula <script type="math/tex">(13)-(16)</script>, and if <script type="math/tex">r_{0} \geq 2</script>, we obtain</p>
+<script type="math/tex; mode=display">\mid \triangle \ell (k) \mid < 1</script><p>Hence, <script type="math/tex">\mid s_{2}-e_{1} \mid \leq 1</script> for any <script type="math/tex">x \in \rm{set} \{ x_{0}-r_{0},x_{0}-r_{0}+1, \cdots, x_{0}-\sqrt {\frac {r_{0}^{2}}{2}} \}</script>.</p>
 <p>Let <script type="math/tex">C_{1}=(x_{0}-r_{0},y_{0})</script>, <script type="math/tex">C_{2}=(x_{0},y_{0}-r_{0})</script>, <script type="math/tex">C_{3}=(x_{0}+r_{0},y_{0})</script>,<script type="math/tex">C_{4}=(x_{0},y_{0}+r_{0})</script>, if <script type="math/tex">r_{0}=1</script>, then the circle is formed by these four points.</p>
 <p>It is obivious that <script type="math/tex">\ell _{1}</script> and <script type="math/tex">\ell _{2}</script> is connected by point <script type="math/tex">(x_{0}-r_{0},y_{0})</script>, and <script type="math/tex">A_{0}, A_{1}, A_{2}, A_{3}</script> joint the four arcs together, so it have formed a complete circle.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Done</span><br></pre></td></tr></table></figure>
