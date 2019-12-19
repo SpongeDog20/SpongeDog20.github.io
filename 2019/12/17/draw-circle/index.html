@@ -16,7 +16,7 @@
 <meta property="og:description" content="1Elliptic Curve y^2&#x3D;x^3+{\rm a}x+{\rm b}in which 4{\rm a}^{3}+27{\rm b}^{2}\neq 0">
 <meta property="og:locale" content="undefined">
 <meta property="article:published_time" content="2019-12-17T05:24:51.000Z">
-<meta property="article:modified_time" content="2019-12-19T02:01:32.538Z">
+<meta property="article:modified_time" content="2019-12-19T02:11:30.398Z">
 <meta property="article:author" content="SpongeDog">
 <meta property="article:tag" content="Algorithm">
 <meta property="article:tag" content="Math">
@@ -194,7 +194,8 @@
 <script type="math/tex; mode=display">P_{1}=(x_{0}+y_{0}-y,x_{0}+y_{0}-x)</script><script type="math/tex; mode=display">P_{2}=(x_{0}+y_{0}-x,x_{0}+y_{0}-y)</script><script type="math/tex; mode=display">P_{3}=(x_{0}-y_{0}+y,y_{0}-x_{0}+x)</script><p>It’s obvious that these four arcs form a complete circle.</p>
 <p>Suppose we plot a black circle in a white background image. Next, we need to deal with the anti-aliasing problem. We have discussed that the circle is symmetrical, so it only have to settle the staircase artifact of the arc <script type="math/tex">\widehat{A_{0}A_{1}}</script>, and the other three will be resolved in the same way.<br>And the arc is determined by <script type="math/tex">(6)-(10)</script>. Let <script type="math/tex">\ell _{1}</script> and <script type="math/tex">\ell _{2}</script> denote the arcs determined by the formulas of <script type="math/tex">(6)</script> and <script type="math/tex">(7)</script> respectively. Moreover, <script type="math/tex">\ell _{1}</script> is symmetric to <script type="math/tex">\ell _{2}</script> with respect to the straight line <script type="math/tex">y = y_{0}</script>.</p>
 <p>We will see that arc <script type="math/tex">\ell _{1}</script> consists of vertical straight line segments.</p>
-<p>For <script type="math/tex">\forall x_{n} \in \rm{set} \{ x_{0}-r_{0},x_{0}-r_{0}+1, \cdots, x_{0}-\sqrt {\frac {r_{0}^{2}}{2}} \}</script><br>when <script type="math/tex">x = x_{n}</script>, we obtain the following straight line segment</p>
+<p>For</p>
+<script type="math/tex; mode=display">\forall x_{n} \in \rm{set} \{ x_{0}-r_{0},x_{0}-r_{0}+1, \cdots, x_{0}-\sqrt {\frac {r_{0}^{2}}{2}} \}</script><p>when <script type="math/tex">x = x_{n}</script>, we obtain the following straight line segment</p>
 <script type="math/tex; mode=display">y_{0}+s(x_{n}) \leq y \leq y_{0}+e(x_{n}) \quad \quad \quad \quad (11)</script><p>Let <script type="math/tex">B_{0}=(x-1,y)</script>, <script type="math/tex">B_{1}=(x,y)</script>, <script type="math/tex">B_{2}=(x+1,y)</script>, in which <script type="math/tex">B_{1}</script> is an arbitrary point of the straight line segment <script type="math/tex">(11)</script>. We denote the color of a pixel <script type="math/tex">P</script> by <script type="math/tex">rgb(P)=(r,g,b)</script> (Only discuss the case of three<br>channels), then <script type="math/tex">rgb(B_{1})=(0,0,0)</script> is a black pixel. In order to settle the staircase artifact, we need to find a proper color of <script type="math/tex">B_{0}</script> and <script type="math/tex">B_{2}</script> which make the transition between the circle and the white background more<br>smooth. We set <script type="math/tex">bv=(255,255,255)</script> be the background color(white) and <script type="math/tex">fv=(0,0,0)</script> be the front color(black).</p>
 <p>Here, we give a simple solution, we just let <script type="math/tex">rgb(B_{0})=rgb(B_{1})=\frac{1}{3}(fv+bv)=(85,85,85)</script>.</p>
 <p>Asserstion 1:<br>Arc <script type="math/tex">\widehat{A_{0}A_{1}}</script> and arc <script type="math/tex">\widehat{A_{2}A_{3}}</script> consist of vertical straight line segments respectively.</p>
@@ -208,8 +209,8 @@
 <script type="math/tex; mode=display">\triangle \ell (k)= s(x_{0}-r_{0}+k)-e(x_{0}-r_{0}+k-1), \quad k=1,\cdots , [\frac{r_{0}}{\sqrt{2}}+0.5] \quad \quad \quad \quad (12)</script><p>According to formula <script type="math/tex">(8)-(10)</script>, it gets</p>
 <script type="math/tex; mode=display">\triangle \ell (k)=\frac{-2k+1}{\sqrt{f(k)}+\sqrt{f(k)+2k-1}} \quad \quad \quad \quad (13)</script><p>where</p>
 <script type="math/tex; mode=display">f(k)=-2k^{2}+2r_{0}k-r_{0} \quad \quad \quad \quad (14) $$.
-then we have
-$$ \mid {\triangle {\ell {(k)}} }\mid \leq \frac{2k-1}{2\sqrt{f(k)}} \quad \quad \quad \quad (15)</script><p>Let <script type="math/tex">F(x)=4f(k)-(2k-1)^{2}</script>, it is easy to show that <script type="math/tex">F(x)</script> is monotonic increasing by <script type="math/tex">1 \leq k \leq \frac{r_{0}}{\sqrt{2}}</script>, then it gets</p>
+Then we have
+$$ \mid {\triangle {\ell {(k)}}} \mid \leq \frac{2k-1}{2\sqrt{f(k)}} \quad \quad \quad \quad (15)</script><p>Let <script type="math/tex">F(x)=4f(k)-(2k-1)^{2}</script>, it is easy to show that <script type="math/tex">F(x)</script> is monotonic increasing by <script type="math/tex">1 \leq k \leq \frac{r_{0}}{\sqrt{2}}</script>, then it gets</p>
 <script type="math/tex; mode=display">F(x) \geq F(0), \quad \quad \quad \quad (16)</script><script type="math/tex; mode=display">F(0)=4r_{0}-5, \quad \quad \quad \quad (17)</script><p>combine formula <script type="math/tex">(13)-(17)</script>, we obtain<br>If <script type="math/tex">r_{0} \geq 2 \quad</script>, then</p>
 <p><script type="math/tex">\mid \triangle \ell (k) \mid < 1</script>.</p>
 <p>Hence, <script type="math/tex">\mid s_{2}-e_{1} \mid \leq 1</script> for any <script type="math/tex">x \in \rm{set} \{ x_{0}-r_{0},x_{0}-r_{0}+1, \cdots, x_{0}-\sqrt {\frac {r_{0}^{2}}{2}} \}</script>.</p>
