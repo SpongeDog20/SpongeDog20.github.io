@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Draw-circle | SpongeDog&#39;s Blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1Elliptic Curve y^2&#x3D;x^3+{\rm a}x+{\rm b}in which 4{\rm a}^{3}+27{\rm b}^{2}\neq 0">
+  <meta name="description" content="1Elliptic Curve y^2&#x3D;x^3+{\rm a}x+{\rm b},in which 4{\rm a}^{3}+27{\rm b}^{2}\neq 0.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Draw-circle">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;17&#x2F;draw-circle&#x2F;index.html">
 <meta property="og:site_name" content="SpongeDog&#39;s Blogs">
-<meta property="og:description" content="1Elliptic Curve y^2&#x3D;x^3+{\rm a}x+{\rm b}in which 4{\rm a}^{3}+27{\rm b}^{2}\neq 0">
+<meta property="og:description" content="1Elliptic Curve y^2&#x3D;x^3+{\rm a}x+{\rm b},in which 4{\rm a}^{3}+27{\rm b}^{2}\neq 0.">
 <meta property="og:locale" content="undefined">
 <meta property="article:published_time" content="2019-12-17T05:24:51.000Z">
-<meta property="article:modified_time" content="2019-12-19T05:47:37.929Z">
+<meta property="article:modified_time" content="2019-12-19T05:57:27.419Z">
 <meta property="article:author" content="SpongeDog">
 <meta property="article:tag" content="Algorithm">
 <meta property="article:tag" content="Math">
@@ -172,13 +172,22 @@
   	<time datetime="2019-12-17T05:24:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-17</time>
 </a>
         
+        
+        
+        
+          <span class="archive-article-date">
+              阅读量 <span id="busuanzi_value_page_pv"></span>
+          </span>
+        
+
+        
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
         <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Elliptic Curve</span><br></pre></td></tr></table></figure>
-<script type="math/tex; mode=display">y^2=x^3+{\rm a}x+{\rm b}</script><p>in which</p>
-<script type="math/tex; mode=display">4{\rm a}^{3}+27{\rm b}^{2}\neq 0</script><a id="more"></a>
+<script type="math/tex; mode=display">y^2=x^3+{\rm a}x+{\rm b},</script><p>in which</p>
+<script type="math/tex; mode=display">4{\rm a}^{3}+27{\rm b}^{2}\neq 0.</script><a id="more"></a>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Drawing Circle</span><br></pre></td></tr></table></figure>
 <p>Given an image with width <script type="math/tex">w</script> and height <script type="math/tex">h</script>, then for any pixel <script type="math/tex">P=(x,y)</script> in the image, it satisfies that <script type="math/tex">0\leq x<w-1</script>, <script type="math/tex">0\leq y<h-1</script>, and <script type="math/tex">x</script>, <script type="math/tex">y</script> are integers.<br>Let <script type="math/tex">C</script> be the circle of radius <script type="math/tex">r_0</script> with center at <script type="math/tex">(x_0,y_0)</script></p>
 <script type="math/tex; mode=display">(x-x_{0})^{2}+(y-y_{0})^{2}=r_{0}^{2}. \quad \quad \quad \quad (1)</script><p>Let <script type="math/tex">x=x_{0}-r_{0}, x_{0}-r_{0}+1,\dots ,x_{0}+r_{0}</script>, we can obtain</p>
@@ -196,7 +205,7 @@
 <p>We will see that arc <script type="math/tex">\ell _{1}</script> consists of vertical straight line segments.</p>
 <p>For</p>
 <script type="math/tex; mode=display">\forall x_{n} \in \rm{set} \{ x_{0}-r_{0},x_{0}-r_{0}+1, \cdots, x_{0}-\sqrt {\frac {r_{0}^{2}}{2}} \},</script><p>we obtain the following straight line segment</p>
-<script type="math/tex; mode=display">x = x_{n}, \quad y_{0}+s(x_{n}) \leq y \leq y_{0}+e(x_{n}). \quad \quad \quad \quad (11)</script><p>Let <script type="math/tex">B_{0}=(x-1,y)</script>, <script type="math/tex">B_{1}=(x,y)</script>, <script type="math/tex">B_{2}=(x+1,y)</script>, in which <script type="math/tex">B_{1}</script> is an arbitrary point in the straight line segment <script type="math/tex">(11)</script>.<br>For an arbitrary pixel <script type="math/tex">P</script> in the image, its color was denoted by <script type="math/tex">rgb(P)=(r,g,b)</script> (Notice: We only discuss the case of three channels here).<br>In order to settle the staircase artifact, we need to find a proper color of <script type="math/tex">B_{0}</script> and <script type="math/tex">B_{2}</script> which make the transition between the circle and the white background more smooth.<br>We set <script type="math/tex">v_{b}=(255,255,255)</script> be the background color (white) and <script type="math/tex">v_{f}=(0,0,0)</script> be the front color (black), then <script type="math/tex">rgb(B_{1})=v_{f}</script> is a black pixel.</p>
+<script type="math/tex; mode=display">x = x_{n}, \quad y_{0}+s(x_{n}) \leq y \leq y_{0}+e(x_{n}). \quad \quad \quad \quad (11)</script><p>Let <script type="math/tex">B_{0}=(x-1,y)</script>, <script type="math/tex">B_{1}=(x,y)</script>, <script type="math/tex">B_{2}=(x+1,y)</script>, in which <script type="math/tex">B_{1}</script> is an arbitrary point in the straight line segment <script type="math/tex">(11)</script>.<br>For an arbitrary pixel <script type="math/tex">P</script> in the image, its color was denoted by <script type="math/tex">rgb(P)=(r,g,b)</script> (Notice: We only discuss the three channels image here).<br>In order to settle the staircase artifact, we need to find a proper color of <script type="math/tex">B_{0}</script> and <script type="math/tex">B_{2}</script> which make the transition between the circle and the white background more smooth.<br>We set <script type="math/tex">v_{b}=(255,255,255)</script> be the background color (white) and <script type="math/tex">v_{f}=(0,0,0)</script> be the front color (black), then <script type="math/tex">rgb(B_{1})=v_{f}</script> is a black pixel.</p>
 <p>Here, we give a simple solution, we just let <script type="math/tex">rgb(B_{0})=rgb(B_{1})=\frac{1}{3}(v_{f}+v_{b})=(85,85,85)</script>.</p>
 <p>Asserstion 1:<br>Arc <script type="math/tex">\widehat{A_{0}A_{1}}</script> and arc <script type="math/tex">\widehat{A_{2}A_{3}}</script> consist of vertical straight line segments respectively.</p>
 <p>Assertion 2:<br>Arc <script type="math/tex">\widehat{A_{1}A_{2}}</script> and arc <script type="math/tex">\widehat{A_{0}A_{3}}</script> consist of horizontal straight line segments respectively.</p>
@@ -322,6 +331,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/12/19/log00001/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          log00001
+        
+      </div>
+    </a>
+  
   
     <a href="/2019/12/16/imageTest/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">SpongeBob</div>
@@ -371,6 +389,18 @@
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      		
+      		
+      		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      		<span id="busuanzi_container_site_pv">
+                ��վ�ܷ�������<span id="busuanzi_value_site_pv"></span>��
+            </span>
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_container_site_uv">
+                ��վ�ÿ�����<span id="busuanzi_value_site_uv"></span>��
+            </span>
+      		
+      		
       	</div>
     </div>
   </div>
@@ -480,6 +510,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Pictures</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">StudyNotes</a>
               </li>
              
               <li class="article-tag-list-item">
