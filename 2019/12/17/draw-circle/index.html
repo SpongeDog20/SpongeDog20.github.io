@@ -16,7 +16,7 @@
 <meta property="og:description" content="1Elliptic Curve y^2&#x3D;x^3+{\rm a}x+{\rm b}in which 4{\rm a}^{3}+27{\rm b}^{2}\neq 0">
 <meta property="og:locale" content="undefined">
 <meta property="article:published_time" content="2019-12-17T05:24:51.000Z">
-<meta property="article:modified_time" content="2019-12-19T05:40:50.382Z">
+<meta property="article:modified_time" content="2019-12-19T05:45:03.731Z">
 <meta property="article:author" content="SpongeDog">
 <meta property="article:tag" content="Algorithm">
 <meta property="article:tag" content="Math">
@@ -196,17 +196,26 @@
 <p>We will see that arc <script type="math/tex">\ell _{1}</script> consists of vertical straight line segments.</p>
 <p>For</p>
 <script type="math/tex; mode=display">\forall x_{n} \in \rm{set} \{ x_{0}-r_{0},x_{0}-r_{0}+1, \cdots, x_{0}-\sqrt {\frac {r_{0}^{2}}{2}} \},</script><p>we obtain the following straight line segment</p>
-<script type="math/tex; mode=display">x = x_{n}, \quad y_{0}+s(x_{n}) \leq y \leq y_{0}+e(x_{n}). \quad \quad \quad \quad (11)</script><pre><code>Let $$ B_{0}=(x-1,y) $$, $$ B_{1}=(x,y) $$, $$ B_{2}=(x+1,y) $$, in which $$ B_{1} $$ is an arbitrary point in the straight line segment $$ (11) $$.
-For an arbitrary pixel $$ P $$ in the image, its color was denoted by $$ rgb(P)=(r,g,b) $$ (Notice: We only discuss the case of three channels here).
-In order to settle the staircase artifact, we need to find a proper color of $$ B_{0} $$ and $$ B_{2} $$ which make the transition between the circle and the white background more smooth.
-We set $$ v_{b}=(255,255,255) $$ be the background color (white) and $$ v_{f}=(0,0,0) $$ be the front color (black), then $$ rgb(B_{1})=v_{f} $$ is a black pixel.
-</code></pre><p>Here, we give a simple solution, we just let <script type="math/tex">rgb(B_{0})=rgb(B_{1})=\frac{1}{3}(v_{f}+v_{b})=(85,85,85)</script>.</p>
-<p>Asserstion 1:<br>Arc <script type="math/tex">\widehat{A_{0}A_{1}}</script> and arc <script type="math/tex">\widehat{A_{2}A_{3}}</script> consist of vertical straight line segments respectively.</p>
-<p>Assertion 2:<br>Arc <script type="math/tex">\widehat{A_{1}A_{2}}</script> and arc <script type="math/tex">\widehat{A_{0}A_{3}}</script> consist of horizontal straight line segments respectively.</p>
-<p>By the symmetrical of the circle, we just need to consider arc <script type="math/tex">\widehat{A_{0}A_{1}}</script>. And if we can proof that <script type="math/tex">\ell _{1}</script> consists of vertical straight line segments, then the above assertions are correct.</p>
-<p>Assertion 3:<br>Arc <script type="math/tex">\ell _{1}</script> is make up of vertical straight line segments.</p>
-<p>Given two adjacent straight line segments of arc <script type="math/tex">\ell _{1}</script> which are determined by <script type="math/tex">(6)</script> as follow</p>
-<script type="math/tex; mode=display">x = x_{1}, \quad \quad s_{1} \leq y \leq e_{1},</script><script type="math/tex; mode=display">x = x_{2} = x_{1} + 1, \quad \quad s_{2} \leq y \leq e_{2},</script><p>if we can verify <script type="math/tex">\mid s_{2}-e_{1} \mid \leq 1</script>, then the assertion 3 is correct. </p>
+<script type="math/tex; mode=display">x = x_{n}, \quad y_{0}+s(x_{n}) \leq y \leq y_{0}+e(x_{n}). \quad \quad \quad \quad (11)</script><script type="math/tex; mode=display">\quad $$ Let $$ B_{0}=(x-1,y) $$, $$ B_{1}=(x,y) $$, $$ B_{2}=(x+1,y) $$, in which $$ B_{1} $$ is an arbitrary point in the straight line segment $$ (11) $$.
+$$ \quad $$ For an arbitrary pixel $$ P $$ in the image, its color was denoted by $$ rgb(P)=(r,g,b) $$ (Notice: We only discuss the case of three channels here).
+$$ \quad $$ In order to settle the staircase artifact, we need to find a proper color of $$ B_{0} $$ and $$ B_{2} $$ which make the transition between the circle and the white background more smooth.
+$$ \quad $$ We set $$ v_{b}=(255,255,255) $$ be the background color (white) and $$ v_{f}=(0,0,0) $$ be the front color (black), then $$ rgb(B_{1})=v_{f} $$ is a black pixel.
+
+Here, we give a simple solution, we just let $$ rgb(B_{0})=rgb(B_{1})=\frac{1}{3}(v_{f}+v_{b})=(85,85,85) $$.
+
+Asserstion 1:
+Arc $$ \widehat{A_{0}A_{1}} $$ and arc $$ \widehat{A_{2}A_{3}} $$ consist of vertical straight line segments respectively.
+
+Assertion 2:
+Arc $$ \widehat{A_{1}A_{2}} $$ and arc $$ \widehat{A_{0}A_{3}} $$ consist of horizontal straight line segments respectively.
+
+By the symmetrical of the circle, we just need to consider arc $$ \widehat{A_{0}A_{1}} $$. And if we can proof that $$ \ell _{1} $$ consists of vertical straight line segments, then the above assertions are correct.
+
+Assertion 3:
+Arc $$ \ell _{1} $$ is make up of vertical straight line segments.
+
+Given two adjacent straight line segments of arc $$ \ell _{1} $$ which are determined by $$ (6) $$ as follow
+$$ x = x_{1}, \quad \quad s_{1} \leq y \leq e_{1},</script><script type="math/tex; mode=display">x = x_{2} = x_{1} + 1, \quad \quad s_{2} \leq y \leq e_{2},</script><p>if we can verify <script type="math/tex">\mid s_{2}-e_{1} \mid \leq 1</script>, then the assertion 3 is correct. </p>
 <p>Let</p>
 <script type="math/tex; mode=display">x(k)=x_{0}-r_{0} + k, \quad k=0,1,\cdots , [\frac{r_{0}}{\sqrt{2}}+0.5].</script><p>Define the difference value as follow:</p>
 <script type="math/tex; mode=display">\triangle \ell (k)= s(x_{0}-r_{0}+k)-e(x_{0}-r_{0}+k-1), \quad k=1,\cdots , [\frac{r_{0}}{\sqrt{2}}+0.5]. \quad \quad \quad \quad (12)</script><p>According to formula <script type="math/tex">(8)-(10)</script>, it gets</p>
