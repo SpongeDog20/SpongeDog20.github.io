@@ -1,3 +1,3 @@
 # SpongeDog20.github.io
-www.spongedog.cn
-Buiding my personal blog website.
+
+Buiding my personal blog website 'www.spongedog.cn'.
