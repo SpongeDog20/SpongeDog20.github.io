@@ -16,7 +16,7 @@
 <meta property="og:description" content="Drawing Circle &amp;ensp;&amp;ensp;Given an image with width w and height h. Then any pixel P&#x3D;(x,y) in the image satisfies that 0\leq x">
 <meta property="og:locale" content="undefined">
 <meta property="article:published_time" content="2019-12-17T05:24:51.000Z">
-<meta property="article:modified_time" content="2019-12-23T09:51:53.655Z">
+<meta property="article:modified_time" content="2019-12-24T02:23:20.905Z">
 <meta property="article:author" content="SpongeDog">
 <meta property="article:tag" content="Algorithm">
 <meta property="article:tag" content="Math">
@@ -192,7 +192,7 @@
 <script type="math/tex; mode=display">y=y_{0}\pm \sqrt{r_{0}^{2}-(x-x_{0})^{2}}. \quad \quad \quad \quad (2)</script><p>&ensp;&ensp;Furthermore,</p>
 <script type="math/tex; mode=display">y_{1} = [y_{0}-\sqrt{r_{0}^{2}-(x-x_{0})^{2}}+0.5], \quad \quad \quad \quad (3)</script><script type="math/tex; mode=display">y_{2} = [y_{0}+\sqrt{r_{0}^{2}-(x-x_{0})^{2}}+0.5], \quad \quad \quad \quad (4)</script><p>in which <script type="math/tex">[\cdot ]</script> is the rounding operation.</p>
 <p>&ensp;&ensp;Since we are drawing the circle <script type="math/tex">C</script> of the formula <script type="math/tex">(1)</script> in a discrete space, the allowing error is <script type="math/tex">\varepsilon = 0.5</script>, then it gets</p>
-<script type="math/tex; mode=display">(r_{0}-\varepsilon)^{2} \leq (x-x_{0})^{2} + (y-y_{0})^{2} \leq (r_{0}-\varepsilon)^{2}. \quad \quad \quad \quad (5)</script><p>&ensp;&ensp;Let <script type="math/tex">(x-x_{0})^{2}=(y-y_{0})^{2}</script>, combine with formula <script type="math/tex">(1)</script>, we can obtain 4 points in the space <script type="math/tex">\rm {R} \times \rm {R}</script>, i.e.</p>
+<script type="math/tex; mode=display">(r_{0}-\varepsilon)^{2} \leq (x-x_{0})^{2} + (y-y_{0})^{2} \leq (r_{0}-\varepsilon)^{2}. \quad \quad \quad \quad (5)</script><p>&ensp;&ensp;Let <script type="math/tex">(x-x_{0})^{2}=(y-y_{0})^{2}</script>, combine with formula <script type="math/tex">(1)</script>, we can obtain 4 points in the space <script type="math/tex">R \times R</script>, i.e.</p>
 <script type="math/tex; mode=display">A_{0} = (x_{0}-\sqrt {\frac {r_{0}^{2}}{2}}, y_{0}+\sqrt {\frac {r_{0}^{2}}{2}}),</script><script type="math/tex; mode=display">A_{1} = (x_{0}-\sqrt {\frac {r_{0}^{2}}{2}}, y_{0}-\sqrt {\frac {r_{0}^{2}}{2}}),</script><script type="math/tex; mode=display">A_{2} = (x_{0}+\sqrt {\frac {r_{0}^{2}}{2}}, y_{0}-\sqrt {\frac {r_{0}^{2}}{2}}),</script><script type="math/tex; mode=display">A_{3} = (x_{0}+\sqrt {\frac {r_{0}^{2}}{2}}, y_{0}+\sqrt {\frac {r_{0}^{2}}{2}}).</script><p>&ensp;&ensp;They divide the circle <script type="math/tex">C</script> into four arcs in counter-clockwise direction, i.e. <script type="math/tex">\widehat{A_{0}A_{1}}</script>, <script type="math/tex">\widehat{A_{1}A_{2}}</script>, <script type="math/tex">\widehat{A_{2}A_{3}}</script>, <script type="math/tex">\widehat{A_{0}A_{3}}</script>.</p>
 <p>&ensp;&ensp;Now let us consider arc <script type="math/tex">\widehat{A_{0}A{1}}</script>, we know that <script type="math/tex">x = x_{0}-r_{0},x_{0}-r_{0}+1, \cdots, x_{0}-\sqrt {\frac {r_{0}^{2}}{2}}</script>, according to formula <script type="math/tex">(5)</script>, it has</p>
 <script type="math/tex; mode=display">y_{0}+s(x) \leq y \leq y_{0}+e(x), \quad \quad \quad \quad (6)</script><script type="math/tex; mode=display">y_{0}-e(x) \leq y \leq y_{0}-s(x), \quad \quad \quad \quad (7)</script><p>in which</p>
@@ -205,7 +205,7 @@
 <p>&ensp;&ensp;And the arc is determined by <script type="math/tex">(6)-(10)</script>. Let <script type="math/tex">\ell _{1}</script> and <script type="math/tex">\ell _{2}</script> denote the arcs determined by the formulas of <script type="math/tex">(6)</script> and <script type="math/tex">(7)</script> respectively. Moreover, <script type="math/tex">\ell _{1}</script> is symmetric to <script type="math/tex">\ell _{2}</script> with respect to the straight line <script type="math/tex">y = y_{0}</script>.</p>
 <p>&ensp;&ensp;We will see that arc <script type="math/tex">\ell _{1}</script> consists of vertical straight line segments.</p>
 <p>&ensp;&ensp;For</p>
-<script type="math/tex; mode=display">\forall x_{n} \in \rm{set} \{ x_{0}-r_{0},x_{0}-r_{0}+1, \cdots, x_{0}-\sqrt {\frac {r_{0}^{2}}{2}} \},</script><p>we obtain the following straight line segment</p>
+<script type="math/tex; mode=display">\forall x_{n} \in S=\{ x_{0}-r_{0},x_{0}-r_{0}+1, \cdots, x_{0}-\sqrt {\frac {r_{0}^{2}}{2}} \},</script><p>we obtain the following straight line segment</p>
 <script type="math/tex; mode=display">x = x_{n}, \quad y_{0}+s(x_{n}) \leq y \leq y_{0}+e(x_{n}). \quad \quad \quad \quad (11)</script><p>&ensp;&ensp;Let <script type="math/tex">B_{0}=(x-1,y)</script>, <script type="math/tex">B_{1}=(x,y)</script>, <script type="math/tex">B_{2}=(x+1,y)</script>, in which <script type="math/tex">B_{1}</script> is an arbitrary point in the straight line segment <script type="math/tex">(11)</script>.</p>
 <p>&ensp;&ensp;For an arbitrary pixel <script type="math/tex">P</script> in the image, its color was denoted by <script type="math/tex">rgb(P)=(r,g,b)</script> (Notice: We only discuss the three channels image here).</p>
 <p>&ensp;&ensp;In order to settle the staircase artifact, we need to find a proper color of <script type="math/tex">B_{0}</script> and <script type="math/tex">B_{2}</script> which make the transition between the circle and the white background more smooth.</p>
@@ -225,13 +225,13 @@
 <script type="math/tex; mode=display">\mid {\triangle {\ell {(k)}}} \mid \leq \frac {2k-1}{2 \sqrt{f(k)}}. \quad \quad \quad \quad (14)</script><p>&ensp;&ensp;Let</p>
 <script type="math/tex; mode=display">F(x)=4f(k)-(2k-1)^{2}, \quad 1 \leq k \leq \frac{r_{0}}{\sqrt{2}}, \quad \quad \quad \quad (15)</script><p>it is easy to show that <script type="math/tex">F(x)</script> is monotonic increasing, then</p>
 <script type="math/tex; mode=display">F(x) \geq F(0), \quad \quad \quad \quad (16)</script><p>in which <script type="math/tex">F(0)=4r_{0}-5</script>, combine formula <script type="math/tex">(13)-(16)</script>, and if <script type="math/tex">r_{0} \geq 2</script>, we obtain</p>
-<script type="math/tex; mode=display">\mid \triangle \ell (k) \mid \leq 1.</script><p>&ensp;&ensp;Hence, <script type="math/tex">\mid s_{2}-e_{1} \mid \leq 1</script> for any <script type="math/tex">x \in \rm{set} \{ x_{0}-r_{0},x_{0}-r_{0}+1, \cdots, x_{0}-\sqrt {\frac {r_{0}^{2}}{2}} \}</script>.</p>
+<script type="math/tex; mode=display">\mid \triangle \ell (k) \mid \leq 1.</script><p>&ensp;&ensp;Hence, <script type="math/tex">\mid s_{2}-e_{1} \mid \leq 1</script> for any <script type="math/tex">x \in S=\{ x_{0}-r_{0},x_{0}-r_{0}+1, \cdots, x_{0}-\sqrt {\frac {r_{0}^{2}}{2}} \}</script>.</p>
 <p>&ensp;&ensp;Let <script type="math/tex">C_{1}=(x_{0}-r_{0},y_{0})</script>, <script type="math/tex">C_{2}=(x_{0},y_{0}-r_{0})</script>, <script type="math/tex">C_{3}=(x_{0}+r_{0},y_{0})</script>,<script type="math/tex">C_{4}=(x_{0},y_{0}+r_{0})</script>, if <script type="math/tex">r_{0}=1</script>, then the circle is formed by these four points.</p>
 <p>&ensp;&ensp;It is obivious that <script type="math/tex">\ell _{1}</script> and <script type="math/tex">\ell _{2}</script> is connected by point <script type="math/tex">(x_{0}-r_{0},y_{0})</script>, and <script type="math/tex">A_{0}, A_{1}, A_{2}, A_{3}</script> joint the four arcs together, so it have formed a complete circle.</p>
 <p><strong> Done&ensp;! </strong></p>
 <h1 id="Elliptic-Curve"><a href="#Elliptic-Curve" class="headerlink" title=" Elliptic Curve "></a><center> Elliptic Curve </center></h1><p>&ensp;&ensp;I just want to show the elliptic curve here.</p>
-<script type="math/tex; mode=display">y^2=x^3+{\rm a}x+{\rm b},</script><p>in which</p>
-<script type="math/tex; mode=display">4{\rm a}^{3}+27{\rm b}^{2}\neq 0.</script>
+<script type="math/tex; mode=display">y^2=x^3+ax+b,</script><p>in which</p>
+<script type="math/tex; mode=display">4a^{3}+27b^{2}\neq 0.</script>
       
       
       
